@@ -1,0 +1,10 @@
+import sys
+
+from solid import *
+from solid.utils import *
+
+noga = cube([5,5,50])
+poverhnost = cube([50,50,3])
+
+c = left(20)(noga) + right(20)(noga) + forward(20)(left(20)(noga)) + forward(20)(right(20)(noga)) + up(50)(left(25)(back(5)(poverhnost)))
+print(scad_render(c))
